@@ -12,14 +12,18 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        play();
+    }
+
+    public static void play(){
         Deck deck = new StandardDeck();
-        while (deck.getDeckSize() > 0) {
+        while (deck.getDeckSize() > 7) {
             deck.shuffle();
-            play(deck);
+            turn(deck);
         }
     }
 
-    public static void play(Deck deck) {
+    public static void turn(Deck deck) {
         Scanner scan = new Scanner(System.in);
         Actor dealer = new Dealer("Dealer");
         while (dealer.getIsPlaying()) {
