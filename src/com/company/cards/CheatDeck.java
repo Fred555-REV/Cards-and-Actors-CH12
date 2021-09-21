@@ -31,6 +31,11 @@ public class CheatDeck implements Deck {
         return new PlayingCards(SUITS[suitIndex], VALUES[valueIndex]);
     }
 
+    @Override
+    public int getDeckSize() {
+        return 0;
+    }
+
     public void printDeck(){
     }
 }

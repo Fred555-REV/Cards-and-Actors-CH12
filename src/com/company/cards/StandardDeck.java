@@ -26,6 +26,11 @@ public class StandardDeck implements Deck {
     }
 
     @Override
+    public int getDeckSize() {
+        return cards.size();
+    }
+
+    @Override
     public void shuffle(){
         Collections.shuffle(cards);
     }

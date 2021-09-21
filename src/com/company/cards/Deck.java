@@ -4,4 +4,5 @@ public interface Deck {
     void shuffle();
     PlayingCards deal();
     void printDeck();
+    int getDeckSize();
 }
