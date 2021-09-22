@@ -28,16 +28,18 @@ public class Dealer implements Actor {
     }
 
     private int getValue() {
-        handValue =0;
-        boolean hasAce = false;
+        handValue = 0;
+        int aceCount = 0;
         for (PlayingCards card : cards) {
             handValue += card.value;
             if (card.value == 11) {
-                hasAce = true;
+                aceCount++;
             }
         }
-        if (handValue > 21 && hasAce) {
-            handValue -= 10;
+        for (int i = 0; i < aceCount; i++) {
+            if (handValue > 21) {
+                handValue -= 10;
+            }
         }
         return handValue;
     }
